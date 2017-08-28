@@ -1,5 +1,3 @@
-<script>
-
   function c(val) {
     document.getElementById("ft").value = val;
   }
@@ -16,4 +14,3 @@
       c('Error')
     }
   }
-</script>
