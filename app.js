@@ -2,7 +2,7 @@
 var canvas = document.getElementById("myCanvas");
 // use the gotten id to access the canvas drawing tool(getContext)
 var ctx = canvas.getContext("2d");
-// The x and y variable is used to initialize the starting points of the arc drawn 
+// The x and y variable is used to initialize the starting points of the arc drawn
 var x = canvas.width/2;
 var y = canvas.height-30;
 // the dx and dy variables are used to actually make the ball or arc moves from its position
@@ -31,7 +31,7 @@ var brickOffsetLeft = 30;
 var score = 0;
 
 // lives
-var lives = 3;
+var lives = 5;
 
 var bricks = [];
 for(c=0; c<brickColumnCount; c++) {
@@ -127,9 +127,9 @@ function draw() {
     x += dx;
     y += dy;
 
-    
+
     requestAnimationFrame(draw);
-} 
+}
 
 // listen for key-up and key-down events on the keyboard
 document.addEventListener("keydown", keyDownHandler, false);
@@ -147,8 +147,8 @@ function mouseMoveHandler(e) {
 
 /******
 
-	  ASCII CODES for 
-	  left arrow -> 37 
+	  ASCII CODES for
+	  left arrow -> 37
 	  up arrow -> 38
 	  right arrow -> 39
 	  down arrow -> 40
@@ -184,7 +184,7 @@ function collisionDetection() {
 				if(x > b.x && x < b.x+brickWidth && y > b.y && y < b.y+brickHeight) {
 					dy = -dy;
 					b.status = 0;
-					score++;
+					score+=2;
 					if(score == brickRowCount*brickColumnCount) {
 						alert("YOU WIN, CONGRATULATIONS!");
 						document.location.reload();
@@ -198,14 +198,14 @@ function collisionDetection() {
 // draw score function
 function drawScore() {
 	ctx.font = "16px Arial";
-	ctx.fillStyle = "#0095DD";
+	ctx.fillStyle = "black";
 	ctx.fillText("Score: "+score, 8, 20);
 }
 
 // function to draw live counter
 function drawLives() {
 	ctx.font = "16px Arial";
-	ctx.fillStyle = "#0095DD";
+	ctx.fillStyle = "black";
 	ctx.fillText("Lives: "+lives, canvas.width-65, 20);
 }
 
