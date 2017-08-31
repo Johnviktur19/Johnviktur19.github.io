@@ -1,1 +1,2 @@
-# Johnviktur19.github.io
+# GAME 
+ A simple game built HTML5 and JavaScript
