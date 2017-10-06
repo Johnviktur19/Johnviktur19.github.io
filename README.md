@@ -1,2 +1,2 @@
 # GAME 
- A simple game built HTML5 and JavaScript
+ A simple game built with HTML5 and JavaScript.
