@@ -185,7 +185,7 @@ function collisionDetection() {
 					dy = -dy;
 					b.status = 0;
 					score+=2;
-					if(score == brickRowCount*brickColumnCount) {
+					if(score == (brickRowCount*brickColumnCount)*2) {
 						alert("YOU WIN, CONGRATULATIONS!");
 						document.location.reload();
 					}
